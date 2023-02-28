@@ -55,5 +55,4 @@ public enum Planeta {
     public static EnumSet<Planeta> getGigantesGaseosos() {
         return EnumSet.complementOf(getPlanetasTerrestres());
     }
-
 }
