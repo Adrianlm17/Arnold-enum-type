@@ -1,12 +1,10 @@
 package edu.craptocraft.arnold_enum_type;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertThat;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class ArnoldMainTest {
     
     public static String[] planetas;
