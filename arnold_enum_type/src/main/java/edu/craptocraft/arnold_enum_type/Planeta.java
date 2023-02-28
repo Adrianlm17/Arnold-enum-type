@@ -41,7 +41,7 @@ public enum Planeta {
 	}
 
     public double masaHumano(double peso){
-        return peso/ this.grabedadSuperficie(EARTH);
+        return peso/ Planeta.grabedadSuperficie(EARTH);
     }
 
     public double pesoSuperficie(double peso) {
@@ -52,4 +52,7 @@ public enum Planeta {
         return EnumSet.range(MERCURY, MARS);
     }
 
+    public static EnumSet<Planeta> getGigantesGaseosos() {
+        return EnumSet.complementOf(getPlanetasTerrestres());
+    }
 }
