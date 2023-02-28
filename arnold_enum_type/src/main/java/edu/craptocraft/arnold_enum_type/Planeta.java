@@ -1,5 +1,7 @@
 package edu.craptocraft.arnold_enum_type;
 
+import java.util.EnumSet;
+
 public enum Planeta {
     
     MERCURY (3.303e+23, 2.4397e6),     
@@ -31,7 +33,7 @@ public enum Planeta {
     }
 
     public double grabedadSuperficie(){
-        return G * getMasa() /  Math.pow(this.radio, 2);
+        return G * getMasa() /  Math.pow(getRadio(), 2);
     }
 
     public static double grabedadSuperficie(Planeta planeta) {
@@ -39,11 +41,15 @@ public enum Planeta {
 	}
 
     public double masaHumano(double peso){
-        return peso/ Planeta.grabedadSuperficie(EARTH);
+        return peso/ this.grabedadSuperficie(EARTH);
     }
 
     public double pesoSuperficie(double peso) {
         return masaHumano(peso) * this.grabedadSuperficie();
+    }
+
+    public static EnumSet<Planeta> getPlanetasTerrestres() {
+        return EnumSet.range(MERCURY, MARS);
     }
 
 }
