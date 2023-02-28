@@ -1,7 +1,6 @@
-package edu.craptocraft.arnol_enum_type;
+package edu.craptocraft.arnold_enum_type;
 
-public class App 
-{
+public class ArnoldMain {
     public static void main(String[] args) {
 		 
         double peso = 1.0; // kg
